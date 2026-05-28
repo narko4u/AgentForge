@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 650" fill="none">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#0f1011"/>
+      <stop offset="100%" stop-color="#08090a"/>
+    </radialGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5e6ad2"/>
+      <stop offset="100%" stop-color="#7170ff"/>
+    </linearGradient>
+    <linearGradient id="boxGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.05)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.02)"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowStrong">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrowRight" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="rgba(255,255,255,0.3)"/>
+    </marker>
+    <marker id="arrowRightAccent" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#7170ff"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="650" fill="url(#bgGrad)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.04">
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#7170ff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="900" height="650" fill="url(#grid)"/>
+  </g>
+
+  <!-- Title -->
+  <text x="450" y="45" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="510" fill="#f7f8f8" letter-spacing="-0.3">AgentForge Architecture</text>
+  <text x="450" y="65" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" fill="#8a8f98" letter-spacing="-0.13">One API Key &middot; Every LLM &middot; Zero Vendor Lock-In</text>
+
+  <!-- Divider -->
+  <line x1="100" y1="80" x2="800" y2="80" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <!-- === YOUR APP === -->
+  <rect x="50" y="110" width="220" height="90" rx="8" fill="url(#boxGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="160" y="143" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" font-weight="500" fill="#f7f8f8">Your App</text>
+  <text x="160" y="160" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#8a8f98">Python &middot; Node &middot; Go &middot; cURL</text>
+  <text x="160" y="185" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#62666d">POST /v1/chat/completions</text>
+
+  <!-- Arrow: App → AgentForge -->
+  <line x1="270" y1="155" x2="375" y2="155" stroke="rgba(255,255,255,0.3)" stroke-width="1.5" marker-end="url(#arrowRight)"/>
+  <text x="322" y="145" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="8" fill="#7170ff">Bearer af-xxx</text>
+
+  <!-- === AGENTFORGE SERVER === -->
+  <rect x="385" y="100" width="240" height="110" rx="8" fill="url(#boxGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <rect x="385" y="100" width="240" height="28" rx="8" fill="url(#accentGrad)" opacity="0.15"/>
+  <text x="505" y="118" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="590" fill="#f7f8f8">AgentForge Proxy</text>
+
+  <text x="400" y="147" font-family="JetBrains Mono, monospace" font-size="10" fill="#d0d6e0">Route Resolution</text>
+  <text x="400" y="163" font-family="JetBrains Mono, monospace" font-size="10" fill="#d0d6e0">Auto-Fallback</text>
+  <text x="400" y="179" font-family="JetBrains Mono, monospace" font-size="10" fill="#d0d6e0">Cost Tracking</text>
+  <text x="400" y="195" font-family="JetBrains Mono, monospace" font-size="10" fill="#d0d6e0">Unified Response</text>
+
+  <!-- Small inner boxes for features -->
+  <rect x="560" y="133" width="50" height="18" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+  <text x="585" y="145" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#7170ff">Router</text>
+  <rect x="560" y="155" width="50" height="18" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+  <text x="585" y="167" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#7170ff">Fallback</text>
+  <rect x="560" y="177" width="50" height="18" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+  <text x="585" y="189" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="8" fill="#7170ff">Ledger</text>
+
+  <!-- Arrow: AgentForge → Providers -->
+  <line x1="625" y1="155" x2="710" y2="155" stroke="#7170ff" stroke-width="1.5" marker-end="url(#arrowRightAccent)" opacity="0.6"/>
+
+  <!-- === PROVIDERS === -->
+  <!-- OpenAI -->
+  <rect x="720" y="100" width="155" height="75" rx="8" fill="url(#boxGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <circle cx="740" cy="135" r="10" fill="#5e6ad2" opacity="0.3"/>
+  <text x="740" y="139" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="8" font-weight="600" fill="#f7f8f8">O</text>
+  <text x="760" y="139" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="510" fill="#f7f8f8">OpenAI</text>
+  <text x="740" y="155" font-family="JetBrains Mono, monospace" font-size="9" fill="#8a8f98">gpt-4o &middot; gpt-4o-mini</text>
+  <text x="740" y="168" font-family="JetBrains Mono, monospace" font-size="9" fill="#8a8f98">gpt-4-turbo &middot; gpt-3.5</text>
+
+  <!-- Anthropic -->
+  <rect x="720" y="185" width="155" height="75" rx="8" fill="url(#boxGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <circle cx="740" cy="220" r="10" fill="#5e6ad2" opacity="0.3"/>
+  <text x="740" y="224" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="8" font-weight="600" fill="#f7f8f8">A</text>
+  <text x="760" y="224" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="510" fill="#f7f8f8">Anthropic</text>
+  <text x="740" y="240" font-family="JetBrains Mono, monospace" font-size="9" fill="#8a8f98">claude-sonnet-4</text>
+  <text x="740" y="253" font-family="JetBrains Mono, monospace" font-size="9" fill="#8a8f98">claude-3-opus &middot; haiku</text>
+
+  <!-- DeepSeek -->
+  <rect x="720" y="270" width="155" height="75" rx="8" fill="url(#boxGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <circle cx="740" cy="305" r="10" fill="#5e6ad2" opacity="0.3"/>
+  <text x="740" y="309" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="8" font-weight="600" fill="#f7f8f8">D</text>
+  <text x="760" y="309" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="510" fill="#f7f8f8">DeepSeek</text>
+  <text x="740" y="325" font-family="JetBrains Mono, monospace" font-size="9" fill="#8a8f98">deepseek-chat</text>
+  <text x="740" y="338" font-family="JetBrains Mono, monospace" font-size="9" fill="#8a8f98">deepseek-reasoner</text>
+
+  <!-- OpenRouter -->
+  <rect x="720" y="355" width="155" height="55" rx="8" fill="url(#boxGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1" stroke-dasharray="3 2"/>
+  <circle cx="740" cy="380" r="10" fill="#5e6ad2" opacity="0.3"/>
+  <text x="740" y="384" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="8" font-weight="600" fill="#f7f8f8">OR</text>
+  <text x="760" y="384" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="510" fill="#f7f8f8">OpenRouter</text>
+  <text x="740" y="400" font-family="JetBrains Mono, monospace" font-size="9" fill="#8a8f98">Any model — pass-through</text>
+
+  <!-- === FALLBACK FLOW LABEL === -->
+  <rect x="50" y="240" width="220" height="40" rx="6" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="0.5"/>
+  <text x="160" y="258" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="11" font-weight="510" fill="#7170ff">⬇ Auto-Fallback Flow</text>
+  <text x="160" y="273" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="9" fill="#8a8f98">OpenAI → Anthropic → DeepSeek → OpenRouter</text>
+
+  <!-- === USAGE DASHBOARD === -->
+  <rect x="50" y="310" width="220" height="100" rx="8" fill="url(#boxGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="160" y="338" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="590" fill="#f7f8f8">Usage API</text>
+  <line x1="70" y1="348" x2="250" y2="348" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <text x="65" y="365" font-family="JetBrains Mono, monospace" font-size="9" fill="#d0d6e0">GET /v1/usage</text>
+  <text x="65" y="380" font-family="JetBrains Mono, monospace" font-size="9" fill="#d0d6e0">Total requests: 1,247</text>
+  <text x="65" y="395" font-family="JetBrains Mono, monospace" font-size="9" fill="#d0d6e0">Total cost: $2.34</text>
+
+  <!-- Arrow from AgentForge to Usage -->
+  <line x1="385" y1="210" x2="270" y2="365" stroke="rgba(255,255,255,0.15)" stroke-width="1" marker-end="url(#arrowRight)" opacity="0.5"/>
+
+  <!-- === BOTTOM: KEY FEATURES === -->
+  <line x1="50" y1="440" x2="850" y2="440" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+  <!-- Feature 1 -->
+  <rect x="50" y="460" width="195" height="75" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+  <text x="147" y="485" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="590" fill="#f7f8f8">🔌 One Endpoint</text>
+  <text x="147" y="503" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8a8f98">Replace 6 SDKs with one</text>
+  <text x="147" y="518" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8a8f98">HTTP client. Change base</text>
+  <text x="147" y="533" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8a8f98">URL, that's it.</text>
+
+  <!-- Feature 2 -->
+  <rect x="255" y="460" width="195" height="75" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+  <text x="352" y="485" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="590" fill="#f7f8f8">🔄 Auto-Fallback</text>
+  <text x="352" y="503" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8a8f98">Provider down? No problem.</text>
+  <text x="352" y="518" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8a8f98">AgentForge retries on the</text>
+  <text x="352" y="533" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8a8f98">next available provider.</text>
+
+  <!-- Feature 3 -->
+  <rect x="460" y="460" width="195" height="75" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+  <text x="557" y="485" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="590" fill="#f7f8f8">💰 Cost Tracking</text>
+  <text x="557" y="503" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8a8f98">Every request logged.</text>
+  <text x="557" y="518" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8a8f98">See exactly what you</text>
+  <text x="557" y="533" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8a8f98">spend per model.</text>
+
+  <!-- Feature 4 -->
+  <rect x="665" y="460" width="195" height="75" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="0.5"/>
+  <text x="762" y="485" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="590" fill="#f7f8f8">🔑 One Key</text>
+  <text x="762" y="503" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8a8f98">One API key for your</text>
+  <text x="762" y="518" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8a8f98">whole team. Rotate one,</text>
+  <text x="762" y="533" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#8a8f98">audit one, revoke one.</text>
+
+  <!-- Footer -->
+  <line x1="50" y1="560" x2="850" y2="560" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+  <text x="450" y="585" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10" fill="#62666d">agentforge server  •  GET /health  •  POST /v1/chat/completions  •  GET /v1/usage</text>
+
+  <!-- Glow accent dot top right -->
+  <circle cx="850" cy="30" r="40" fill="#7170ff" opacity="0.04" filter="url(#glowStrong)"/>
+  <circle cx="50" cy="600" r="30" fill="#5e6ad2" opacity="0.03" filter="url(#glowStrong)"/>
+</svg>
