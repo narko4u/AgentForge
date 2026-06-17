@@ -1,13 +1,13 @@
-# AgentForge
+# AgentForge — One API Key, Every LLM
 
-**One API Key. Every LLM. Zero Vendor Lock-In.**
+**Lightweight proxy server for OpenAI, Anthropic, DeepSeek, OpenRouter with auto-fallback and cost tracking.**
 
-[![Buy on Gumroad](https://img.shields.io/badge/Buy-%2415%2Fmo-violet)](https://empirelabs1.gumroad.com/l/agentforge)
+[![Buy on Gumroad](https://img.shields.io/badge/Buy-%2Fmo-violet)](https://empirelabs1.gumroad.com/l/agentforge)
 [![by Empire Labs](https://img.shields.io/badge/by-Empire%20Labs-7170ff)](https://github.com/narko4u)
 
 ---
 
-![AgentForge Cover](agentforge-cover.png)
+> **⚠️ This is a public bridge repository.** The full source code, issue tracker, and development activity live in the private [`narko4u/AgentForge-Core`](https://github.com/narko4u/AgentForge-Core) repository. This repo serves as the public-facing entry point.
 
 ---
 
@@ -28,7 +28,7 @@ AgentForge is a lightweight proxy server that sits between your app and every LL
 ```
 ┌─────────────┐     POST /v1/chat/completions     ┌──────────────┐
 │   Your App  │  ──────────────────────────────▶   │  AgentForge  │
-│             │     Authorization: Bearer af-xxx   │              │
+│             │     Authorization: Bearer ***   │              │
 │  • Python   │                                    │  • Routing   │
 │  • Node.js  │                                    │  • Fallback  │
 │  • cURL     │                                    │  • Cost Logs │
@@ -70,8 +70,7 @@ AgentForge is a lightweight proxy server that sits between your app and every LL
 export AGENTFORGE_OPENAI_KEY=sk-...
 export AGENTFORGE_ANTHROPIC_KEY=sk-ant-...
 export AGENTFORGE_DEEPSEEK_KEY=sk-...
-export AGENTFORGE_API_KEY=af-your-secret-key
-
+export AGENTFORGE_API_KEY=af-you...n
 # Run
 agentforge
 # → Listening on http://localhost:8902
@@ -80,7 +79,7 @@ agentforge
 **Step 2 — Call it like any OpenAI endpoint:**
 ```bash
 curl http://localhost:8902/v1/chat/completions \
-  -H "Authorization: Bearer af-your-secret-key" \
+  -H "Authorization: Bearer *** \
   -H "Content-Type: application/json" \
   -d '{
     "model": "gpt-4o",
@@ -142,6 +141,12 @@ Specify a model and AgentForge finds the cheapest/best provider that supports it
 - **Teams** where every developer needs LLM access without sharing keys
 - **Cost-conscious builders** who want to see exactly what they're spending per model
 - **Anyone** who wants to switch from OpenAI to DeepSeek without rewriting their codebase
+
+---
+
+## Source Code
+
+The full source code for AgentForge is maintained in the **private** [`narko4u/AgentForge-Core`](https://github.com/narko4u/AgentForge-Core) repository. This public repo provides documentation, issue tracking, and community engagement.
 
 ---
 
