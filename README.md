@@ -1,5 +1,7 @@
 # AgentForge — One API Key, Every LLM
 
+![AgentForge](agentforge-thumbnail.png)
+
 **Lightweight proxy server for OpenAI, Anthropic, DeepSeek, OpenRouter with auto-fallback and cost tracking.**
 
 [![Buy on Gumroad](https://img.shields.io/badge/Buy-%2Fmo-violet)](https://empirelabs1.gumroad.com/l/agentforge)
