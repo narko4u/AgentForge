@@ -9,7 +9,7 @@
 
 ---
 
-> **⚠️ This is a public bridge repository.** The full source code, issue tracker, and development activity live in the private [`narko4u/AgentForge-Core`](https://github.com/narko4u/AgentForge-Core) repository. This repo serves as the public-facing entry point.
+> **⚠️ This is a public bridge repository.** The full source code, issue tracker, and development activity live in the private `AgentForge-Core` repository. This repo serves as the public-facing entry point.
 
 ---
 
@@ -148,7 +148,7 @@ Specify a model and AgentForge finds the cheapest/best provider that supports it
 
 ## Source Code
 
-The full source code for AgentForge is maintained in the **private** [`narko4u/AgentForge-Core`](https://github.com/narko4u/AgentForge-Core) repository. This public repo provides documentation, issue tracking, and community engagement.
+The full source code for AgentForge is maintained in the **private** `AgentForge-Core` repository. This public repo provides documentation, issue tracking, and community engagement.
 
 ---
 
