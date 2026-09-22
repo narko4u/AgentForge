@@ -187,4 +187,21 @@ Ready to stop managing six API keys and start shipping?
 
 👉 [**Buy AgentForge on Gumroad — $15/mo**](https://empirelabs1.gumroad.com/l/agentforge)
 
+---
+
+## Acknowledgements
+
+This public repository carries documentation, issue tracking and release notes
+only. The AgentForge implementation and its dependencies live in a separate
+private repository and are not distributed here, so there is no third-party code
+in this repository to attribute.
+
+AgentForge interoperates with the OpenAI, Anthropic and DeepSeek APIs. Those are
+independent services with their own terms, pricing and maintainers. Interoperating
+with them is not affiliation, and none of them has reviewed or endorsed this work.
+
+"OpenAI", "Anthropic" and "DeepSeek" are trademarks of their respective owners.
+
+---
+
 *Built with purpose by Empire Labs.*
